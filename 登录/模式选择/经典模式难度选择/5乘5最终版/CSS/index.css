@@ -1,0 +1,805 @@
+#settingsMenu {  
+    position: absolute;  
+    top: 58px;  
+    right: 10px;  
+    background-color: #88d6e44d;
+    border: 1px solid #ddd;  
+    padding: 10px;  
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);  
+    display: none; 
+    font-size:30px; 
+    
+  }  
+  
+  #settingsButton {  
+    position: absolute;  
+    top: 25px;  
+    right: 10px; 
+    font-size:25px; 
+    font-family:'Simsun';
+    background-color: #71b173;
+    color:white;
+    border: 1px solid #ddd;  
+  }
+  #toggleSound {
+    font-size:25px; 
+    font-family:'Simsun';
+  }
+  #toggleFullscreen {
+    font-size:25px; 
+    font-family:'Simsun';
+    margin-top: 10px;
+  }
+
+
+  .save {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 700px;
+  }
+  
+  .saveGame {
+    display: block;
+    width: 150px;
+    height: 45px;
+    font-size: 20px;
+    text-decoration-line: none;
+    text-align: center;
+    line-height: 45px;
+    background-color: #8dd662;
+    border-radius: 5px;
+    color: #faf8ef;
+    position: absolute;
+    top: 30px;
+    left: 5px;
+  }
+  
+  .loadGame {
+    display: block;
+    width: 150px;
+    height: 45px;
+    font-size: 20px;
+    text-decoration-line: none;
+    text-align: center;
+    line-height: 45px;
+    background-color: #8dd662;
+    border-radius: 5px;
+    color: #faf8ef;
+    position: absolute;
+    top: 30px;
+    left: 170px;
+  }
+
+
+.title {
+
+    display: inline-block;
+
+    width: 200px;
+
+    height: 100px;
+
+    font-size: 70px;
+
+    font-weight: 700;
+
+    line-height: 100px;
+
+    color: #fcfbfa;
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 480px;
+
+}
+
+ 
+
+.score_newGame {
+
+    width: 400px;
+
+    height: 100px;
+
+    position: absolute;
+
+    top: 60px;
+
+    left: 400px;
+
+}
+
+ 
+
+.newGame {
+
+    display: block;
+
+    width: 150px;
+
+    height: 45px;
+
+    font-size: 20px;
+
+    text-decoration-line: none;
+
+    text-align: center;
+
+    line-height: 45px;
+
+    background-color: #8dd662;
+
+    border-radius: 5px;
+
+    color: #faf8ef;
+
+    position: absolute;
+
+    top: 40px;
+
+    left: 305px;
+
+}
+
+ 
+
+.back {
+
+    display: block;
+
+    width: 150px;
+
+    height: 45px;
+
+    font-size: 20px;
+
+    text-decoration-line: none;
+
+    text-align: center;
+
+    line-height: 45px;
+
+    background-color: #8dd662;
+
+    border-radius: 5px;
+
+    color: #faf8ef;
+
+    position: absolute;
+
+    top: 40px;
+
+    left: 470px;
+
+}
+
+.his {
+    display: block;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Simsun';
+    text-decoration-line:none;
+    text-align: center;
+    line-height: 45px;
+    background-color: #8dd662;
+    border-radius: 5px;
+    color: #f9f8f4;
+    position: absolute;
+    top: 340px;
+    left: 1030px;
+}
+.history {
+    display: block;
+    width: 200px;
+    height: 1000px;
+    font-size: 20px;
+    font-family: 'Simsun';
+    text-decoration-line:none;
+    text-align: center;
+    line-height: 13px;
+    background-color: #8dd662;
+    border-radius: 5px;
+    color: #faf8ef;
+    position: absolute;
+    top: 374px;
+    left: 1030px;
+    overflow: scroll; 
+    /* scrollbar-width: none; */
+    scrollbar-color:rgba(242, 242, 244, 0.627) #49a8b9;
+    max-height: 150px; 
+}
+
+
+.best{
+    display: block;
+    width: 200px;
+    height: 190px;
+    font-size: 40px;
+    text-decoration-line:none;
+    text-align: center;
+    line-height: 45px;
+    background-color: #77e05aa2;
+    border-radius: 5px;
+    color: #f7f7f6;
+    position: absolute;
+    top: 30px;
+    left: 1030px;
+  }
+  .bestscore{
+    display: block;
+    width: 200px;
+    height: 100px;
+    font-size: 60px;
+    text-decoration-line:none;
+    text-align: center;
+    line-height: 45px;
+    background-color: #77e05aa2;
+    border-radius: 5px;
+    color: #f6f7f4;
+    position: absolute;
+    top: 100px;
+    left: 1030px;
+  }
+
+/*伪类选择器*/
+
+a:hover {
+
+    color: #CAC0B4;
+
+    background-color: #faf8ef;
+
+    transition: color 0.2s;
+
+}
+
+ 
+
+a:active {
+
+    color: white;
+
+    background-color: #faf8ef;
+
+    transition: color 0.2s;
+
+}
+
+ 
+
+.score {
+
+    font-size: 30px;
+
+    color: #f8f9f7;
+
+    position: absolute;
+
+    top: 50px;
+
+    left: 100px;
+
+}
+
+ 
+
+.userScore {
+
+    font-size: 30px;
+
+    color: #fbfcfb;
+
+    position: absolute;
+
+    top: 50px;
+
+    left: 200px;
+
+}
+
+ 
+/*底方块的颜色*/
+.container_base {
+
+    display: block;
+
+    position: absolute;
+
+    top: 170px;
+
+    left: 470px;
+
+    bottom: 150px;
+
+    background-color: rgba(247, 247, 246, 0.233);
+
+    height: 512px;
+
+    width: 512px;
+
+    border-radius: 10px;
+
+    z-index: -1;
+
+}
+
+ 
+
+.container {
+
+    display: block;
+
+    position: absolute;
+
+    top: 170px;
+
+    left: 470px;
+
+    bottom: 150px;
+
+    background-color: rgba(247, 244, 241, 0.038);
+
+    height: 495px;
+
+    width: 495px;
+
+    border-radius: 10px;
+
+}
+
+ 
+
+.gameOverContainer {
+
+    display: none;
+
+    position: absolute;
+
+    top: 170px;
+
+    left: 470px;
+
+    background-color: rgba(0,0,0,0.4);
+
+    color: #ed3e44;
+
+    height: 512px;
+
+    width: 512px;
+
+    border-radius: 10px;
+
+    font-size: 50px;
+
+    text-align: center;
+
+}
+
+ 
+
+.gameWinContainer {
+
+    display: none;
+
+    position: absolute;
+
+    top: 170px;
+
+    left: 470px;
+
+    background-color: rgba(0,0,0,0.4);
+
+    color: #ed3e44;
+
+    height: 512px;
+
+    width: 512px;
+
+    border-radius: 10px;
+
+    font-size: 50px;
+
+    text-align: center;
+
+}
+
+ 
+/*每个小方块的样式*/
+.container_base div {
+
+    border-radius: 15px;
+
+    width: 90px;
+
+    height: 90px;
+
+ 
+
+    background-color: rgba(223, 218, 213, 0.212);
+
+ 
+
+    position: absolute;
+
+    z-index: -1;
+
+}
+
+ 
+
+.container div {
+
+    font-size: 37px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    border-radius: 15px;
+
+    width: 90px;
+
+    height: 90px;
+
+ 
+
+    background-color: rgba(red, green, blue, 0);
+
+ 
+
+    line-height: 80px;
+
+    position: absolute;
+
+ 
+
+    /*平滑移动*/
+
+    transition: top 0.15s, left 0.15s, background-color 0.15s, color 0.15s;
+
+}
+
+ 
+
+ 
+
+.elem_0_0 {
+
+    top: 11px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_0_1 {
+
+    top: 11px;
+
+    left: 111px;
+
+}
+
+ 
+
+.elem_0_2 {
+
+    top: 11px;
+
+    left: 211px;
+
+}
+
+ 
+
+.elem_0_3 {
+
+    top: 11px;
+
+    left: 311px;
+
+}
+
+.elem_0_4 {
+
+    top: 11px;
+
+    left: 411px;
+
+}
+
+
+ 
+
+.elem_1_0 {
+
+    top: 111px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_1_1 {
+
+    top: 111px;
+
+    left: 111px;
+
+}
+
+ 
+
+.elem_1_2 {
+
+    top: 111px;
+
+    left: 211px;
+
+}
+
+ 
+
+.elem_1_3 {
+
+    top: 111px;
+
+    left: 311px;
+
+}
+
+.elem_1_4 {
+
+    top: 111px;
+
+    left: 411px;
+
+}
+
+
+
+ 
+
+.elem_2_0 {
+
+    top: 211px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_2_1 {
+
+    top: 211px;
+
+    left: 111px;
+
+}
+
+ 
+
+.elem_2_2 {
+
+    top: 211px;
+
+    left: 211px;
+
+}
+
+ 
+
+.elem_2_3 {
+
+    top: 211px;
+
+    left: 311px;
+
+}
+
+
+.elem_2_4 {
+
+    top: 211px;
+
+    left: 411px;
+
+}
+
+
+
+
+ 
+
+.elem_3_0 {
+
+    top: 311px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_3_1 {
+
+    top: 311px;
+
+    left: 111px;
+
+}
+
+ 
+
+.elem_3_2 {
+
+    top: 311px;
+
+    left: 211px;
+
+}
+
+ 
+
+.elem_3_3 {
+
+    top:311px;
+
+    left: 311px;
+
+}
+
+.elem_3_4 {
+
+    top: 311px;
+
+    left: 411px;
+
+}
+
+
+
+.elem_4_0 {
+
+    top: 411px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_4_1 {
+
+    top: 411px;
+
+    left: 111px;
+
+}
+
+ 
+
+.elem_4_2 {
+
+    top: 411px;
+
+    left: 211px;
+
+}
+
+ 
+
+.elem_4_3 {
+
+    top: 411px;
+
+    left: 311px;
+
+}
+
+.elem_4_4 {
+
+    top: 411px;
+
+    left: 411px;
+
+}
+
+
+
+
+ 
+
+.n2 {
+
+    background-color: #bbeb9d
+
+}
+
+ 
+
+.n4 {
+
+    background-color: #9ee472
+
+}
+
+ 
+
+.n8 {
+
+    background-color: #8fdd5f
+
+}
+
+ 
+
+.n16 {
+
+    background-color: #83e04ade
+
+}
+
+ 
+
+.n32 {
+
+    background-color: #73db33c6
+
+}
+
+ 
+
+.n64 {
+
+    background-color: #66d720dc
+
+}
+
+ 
+
+.n128 {
+
+    background-color: #67eb5bc6
+
+}
+
+ 
+
+.n256 {
+
+    background-color: #50e842c6
+
+}
+
+ 
+
+.n512 {
+
+    background-color: #3feb2fc6
+
+}
+
+ 
+
+.n1024 {
+
+    background-color: #2ae21ac6
+
+}
+
+ 
+
+.n2048 {
+
+    background-color: #1ce50ac6
+
+}

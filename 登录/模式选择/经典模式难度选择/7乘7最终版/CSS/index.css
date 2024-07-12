@@ -1,0 +1,1013 @@
+#settingsMenu {  
+    position: absolute;  
+    top: 58px;  
+    right: 10px;  
+    background-color: #88d6e44d;
+    border: 1px solid #ddd;  
+    padding: 10px;  
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);  
+    display: none; 
+    font-size:30px; 
+    
+  }  
+  
+  #settingsButton {  
+    position: absolute;  
+    top: 25px;  
+    right: 10px; 
+    font-size:25px; 
+    font-family:'Simsun';
+    background-color: #78d2fcd7;
+    color:white;
+    border: 1px solid #ddd;  
+  }
+  #toggleSound {
+    font-size:25px; 
+    font-family:'Simsun';
+  }
+  #toggleFullscreen {
+    font-size:25px; 
+    font-family:'Simsun';
+    margin-top: 10px;
+  }
+
+  .save {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 700px;
+  }
+  
+  .saveGame {
+    display: block;
+    width: 150px;
+    height: 45px;
+    font-size: 20px;
+    text-decoration-line: none;
+    text-align: center;
+    line-height: 45px;
+    background-color: #76ceee;
+    border-radius: 5px;
+    color: #faf8ef;
+    position: absolute;
+    top: 30px;
+    left: 5px;
+  }
+  
+  .loadGame {
+    display: block;
+    width: 150px;
+    height: 45px;
+    font-size: 20px;
+    text-decoration-line: none;
+    text-align: center;
+    line-height: 45px;
+    background-color: #76ceee;
+    border-radius: 5px;
+    color: #faf8ef;
+    position: absolute;
+    top: 30px;
+    left: 170px;
+  }
+
+
+
+
+
+
+
+.title {
+
+    display: inline-block;
+
+    width: 200px;
+
+    height: 100px;
+
+    font-size: 70px;
+
+    font-weight: 700;
+
+    line-height: 100px;
+
+    color: #faf9f8;
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 480px;
+
+}
+.gamerule{
+    display:inline-block;
+    margin-top:700px;
+    margin-left:550px;
+    font-size:20px;
+}
+
+ 
+
+.score_newGame {
+
+    width: 400px;
+
+    height: 100px;
+
+    position: absolute;
+
+    top: 60px;
+
+    left: 400px;
+
+}
+
+ 
+
+.newGame {
+
+    display: block;
+
+    width: 150px;
+
+    height: 45px;
+
+    font-size: 20px;
+
+    text-decoration-line: none;
+
+    text-align: center;
+
+    line-height: 45px;
+
+    background-color: #76ceee;
+
+    border-radius: 5px;
+
+    color: #faf8ef;
+
+    position: absolute;
+
+    top: 40px;
+
+    left: 305px;
+
+}
+
+ 
+
+.back {
+
+    display: block;
+
+    width: 150px;
+
+    height: 45px;
+
+    font-size: 20px;
+
+    text-decoration-line: none;
+
+    text-align: center;
+
+    line-height: 45px;
+
+    background-color: #76ceee;
+
+    border-radius: 5px;
+
+    color: #faf8ef;
+
+    position: absolute;
+
+    top: 40px;
+
+    left: 470px;
+
+}
+
+.his {
+    display: block;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Simsun';
+    text-decoration-line:none;
+    text-align: center;
+    line-height: 45px;
+    background-color: #43bae5eb;
+    border-radius: 5px;
+    color: #faf8ef;
+    position: absolute;
+    top: 340px;
+    left: 1030px;
+}
+.history {
+    display: block;
+    width: 200px;
+    height: 1000px;
+    font-size: 20px;
+    font-family: 'Simsun';
+    text-decoration-line:none;
+    text-align: center;
+    line-height: 13px;
+    background-color: #43bae5eb;
+    border-radius: 5px;
+    color: #faf8ef;
+    position: absolute;
+    top: 372px;
+    left: 1030px;
+    overflow: scroll; /* 或者使用 overflow: scroll; */
+    /* scrollbar-width: none; */
+    scrollbar-color:rgba(167, 16, 16, 0.983) #450fa3e3;
+    max-height: 170px; /* 设置最大高度，超过这个高度会出现滚动条 */
+}
+
+.best{
+    display: block;
+    width: 200px;
+    height: 190px;
+    font-size: 40px;
+    text-decoration-line:none;
+    text-align: center;
+    line-height: 45px;
+    background-color: #43bae5eb;
+    border-radius: 5px;
+    color: #fafaf7;
+    position: absolute;
+    top: 30px;
+    left: 1030px;
+  }
+  .bestscore{
+    display: block;
+    width: 200px;
+    height: 100px;
+    font-size: 60px;
+    text-decoration-line:none;
+    text-align: center;
+    line-height: 45px;
+    background-color: #43bae5eb;
+    border-radius: 5px;
+    color: #f7f7f5;
+    position: absolute;
+    top: 100px;
+    left: 1030px;
+  }
+
+/*伪类选择器*/
+
+a:hover {
+
+    color: #CAC0B4;
+
+    background-color: #faf8ef;
+
+    transition: color 0.2s;
+
+}
+
+ 
+
+a:active {
+
+    color: white;
+
+    background-color: #faf8ef;
+
+    transition: color 0.2s;
+
+}
+
+ 
+
+.score {
+
+    font-size: 30px;
+
+    color: #fcfaf8;
+
+    position: absolute;
+
+    top: 50px;
+
+    left: 100px;
+
+}
+
+ 
+
+.userScore {
+
+    font-size: 30px;
+
+    color: #f8f7f6;
+
+    position: absolute;
+
+    top: 50px;
+
+    left: 200px;
+
+}
+
+ 
+/*底方块的颜色*/
+.container_base {
+
+    display: block;
+
+    position: absolute;
+
+    top: 170px;
+
+    left: 470px;
+
+    bottom: 150px;
+
+    background-color: rgba(234, 238, 239, 0.24);
+
+    height: 540px;
+
+    width: 540px;
+
+    border-radius: 10px;
+
+    z-index: -1;
+
+}
+
+ 
+
+.container {
+
+    display: block;
+
+    position: absolute;
+
+    top: 170px;
+
+    left: 470px;
+
+    bottom: 150px;
+
+    background-color: rgba(227, 224, 222, 0);
+
+    height: 495px;
+
+    width: 495px;
+
+    border-radius: 10px;
+
+}
+
+ 
+
+.gameOverContainer {
+
+    display: none;
+
+    position: absolute;
+
+    top: 170px;
+
+    left: 470px;
+    bottom: 150px;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    color: black;
+
+    height: 540px;
+
+    width: 540px;
+
+    border-radius: 10px;
+
+    font-size: 50px;
+
+    text-align: center;
+
+}
+
+ 
+
+.gameWinContainer {
+
+    display: none;
+
+    position: absolute;
+
+    top: 170px;
+
+    left: 470px;
+    bottom: 150px;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    color: #f67c5f;
+
+    height: 540px;
+
+    width: 540px;
+
+    border-radius: 10px;
+
+    font-size: 50px;
+
+    text-align: center;
+
+}
+
+ 
+/*每个小方块的样式*/
+.container_base div {
+
+    border-radius: 15px;
+
+    width: 65px;
+
+    height: 65px;
+
+ 
+
+    background-color: rgba(219, 216, 214, 0.339);
+
+ 
+
+    position: absolute;
+
+    z-index: -1;
+
+}
+
+ 
+
+.container div {
+
+    font-size: 28px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    border-radius: 15px;
+
+    width: 65px;
+
+    height: 65px;
+
+ 
+
+    background-color: rgba(red, green, blue, 0);
+
+ 
+
+    line-height: 78px;
+
+    position: absolute;
+
+ 
+
+    /*平滑移动*/
+
+    transition: top 0.15s, left 0.15s, background-color 0.15s, color 0.15s;
+
+}
+
+ 
+
+ 
+
+.elem_0_0 {
+
+    top: 11px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_0_1 {
+
+    top: 11px;
+
+    left: 86px;
+
+}
+
+ 
+
+.elem_0_2 {
+
+    top: 11px;
+
+    left: 161px;
+
+}
+
+ 
+
+.elem_0_3 {
+
+    top: 11px;
+
+    left: 236px;
+
+}
+
+.elem_0_4 {
+
+    top: 11px;
+
+    left: 311px;
+
+}
+
+.elem_0_5 {
+
+    top: 11px;
+
+    left:386px;
+
+}
+
+.elem_0_6 {
+
+    top: 11px;
+
+    left:461px;
+
+}
+ 
+
+.elem_1_0 {
+
+    top: 86px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_1_1 {
+
+    top: 86px;
+
+    left: 86px;
+
+}
+
+ 
+
+.elem_1_2 {
+
+    top: 86px;
+
+    left: 161px;
+
+}
+
+ 
+
+.elem_1_3 {
+
+    top: 86px;
+
+    left: 236px;
+
+}
+
+.elem_1_4 {
+
+    top: 86px;
+
+    left: 311px;
+
+}
+
+.elem_1_5 {
+
+    top: 86px;
+
+    left: 386px;
+
+}
+
+.elem_1_6 {
+
+    top: 86px;
+
+    left: 461px;
+
+}
+
+ 
+
+.elem_2_0 {
+
+    top: 161px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_2_1 {
+
+    top: 161px;
+
+    left: 86px;
+
+}
+
+ 
+
+.elem_2_2 {
+
+    top: 161px;
+
+    left: 161px;
+
+}
+
+ 
+
+.elem_2_3 {
+
+    top: 161px;
+
+    left: 236px;
+
+}
+
+
+.elem_2_4 {
+
+    top: 161px;
+
+    left: 311px;
+
+}
+
+
+
+.elem_2_5 {
+
+    top: 161px;
+
+    left: 386px;
+
+}
+
+.elem_2_6 {
+
+    top: 161px;
+
+    left: 461px;
+
+}
+
+ 
+
+.elem_3_0 {
+
+    top: 236px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_3_1 {
+
+    top: 236px;
+
+    left: 86px;
+
+}
+
+ 
+
+.elem_3_2 {
+
+    top: 236px;
+
+    left: 161px;
+
+}
+
+ 
+
+.elem_3_3 {
+
+    top:236px;
+
+    left: 236px;
+
+}
+
+.elem_3_4 {
+
+    top: 236px;
+
+    left: 311px;
+
+}
+
+.elem_3_5 {
+
+    top: 236px;
+
+    left: 386px;
+
+}
+
+.elem_3_6 {
+
+    top: 236px;
+
+    left: 461px;
+
+}
+
+.elem_4_0 {
+
+    top: 311px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_4_1 {
+
+    top: 311px;
+
+    left: 86px;
+
+}
+
+ 
+
+.elem_4_2 {
+
+    top: 311px;
+
+    left: 161px;
+
+}
+
+ 
+
+.elem_4_3 {
+
+    top: 311px;
+
+    left: 236px;
+
+}
+
+.elem_4_4 {
+
+    top: 311px;
+
+    left: 311px;
+
+}
+
+.elem_4_5 {
+
+    top: 311px;
+
+    left: 386px;
+
+}
+
+.elem_4_6 {
+
+    top: 311px;
+
+    left: 461px;
+
+}
+
+
+
+.elem_5_0 {
+
+    top: 386px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_5_1 {
+
+    top: 386px;
+
+    left: 86px;
+
+}
+
+ 
+
+.elem_5_2 {
+
+    top: 386px;
+
+    left: 161px;
+
+}
+
+ 
+
+.elem_5_3 {
+
+    top: 386px;
+
+    left: 236px;
+
+}
+
+.elem_5_4 {
+
+    top: 386px;
+
+    left: 311px;
+
+}
+
+.elem_5_5 {
+
+    top: 386px;
+
+    left: 386px;
+
+}
+
+.elem_5_6 {
+
+    top: 386px;
+
+    left: 461px;
+
+}
+
+
+.elem_6_0 {
+
+    top: 461px;
+
+    left: 11px;
+
+}
+
+ 
+
+.elem_6_1 {
+
+    top: 461px;
+
+    left: 86px;
+
+}
+
+ 
+
+.elem_6_2 {
+
+    top: 461px;
+
+    left: 161px;
+
+}
+
+ 
+
+.elem_6_3 {
+
+    top: 461px;
+
+    left: 236px;
+
+}
+
+.elem_6_4 {
+
+    top: 461px;
+
+    left: 311px;
+
+}
+
+.elem_6_5 {
+
+    top: 461px;
+
+    left: 386px;
+
+}
+
+.elem_6_6 {
+
+    top: 461px;
+
+    left: 461px;
+
+}
+
+
+.n2 {
+
+    background-color: #59dae14b
+
+}
+
+ 
+
+.n4 {
+
+    background-color: #37e3ec4b
+
+}
+
+ 
+
+.n8 {
+
+    background-color: #09dae64b
+
+}
+
+ 
+
+.n16 {
+
+    background-color: #0cadb64b
+
+}
+
+ 
+
+.n32 {
+
+    background-color: #2ebde979
+
+}
+
+ 
+
+.n64 {
+
+    background-color: #13b2e279
+
+}
+
+ 
+
+.n128 {
+
+    background-color: #0e82a579
+
+}
+
+ 
+
+.n256 {
+
+    background-color: #0d637e79
+
+
+}
+
+ 
+
+.n512 {
+
+    background-color: #1f6bdc79
+
+}
+
+ 
+
+.n1024 {
+
+    background-color: #1150af79
+
+}
+
+ 
+
+.n2048 {
+
+    background-color: #0e3f8979
+
+}

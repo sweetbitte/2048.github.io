@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+ 
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>2048游戏</title>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <style>
+        body {
+            background-image: url('7.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+
+<style>
+    #timer {
+        font-size: 40px;
+        font-weight: bold;
+        margin-top:20px;
+    }
+
+    .jishiji{
+        display:inline-block;
+        width:250px;
+        height:150px;
+        background-color: rgba(127, 255, 212, 0);
+        text-align: center;
+        border-radius: 15px;
+    }
+</style>
+
+</head>
+
+ 
+
+<body>
+
+    <div class = "jishiji" id = "jishiqi">
+
+    
+        <div id="timer">00:00:00</div>
+        
+    
+    </div>
+
+    <div>
+        <p class = 'his'>玩家历史记录</p>
+        <p class = 'history' id = 'history'></p>
+        
+    </div>
+
+    <button id="settingsButton">设置</button>
+    <div id="settingsMenu" style="display:none;">
+
+        <button id="toggleSound">播放音乐</button>
+        <br>
+        <button id="toggleFullscreen">切换全屏</button>
+    </div>
+
+    <audio id="backgroundMusic" src="SpongeBob Closing Theme.mp3" autoplay loop></audio>
+
+    <script>
+        // 获取元素  
+        const settingsButton = document.getElementById('settingsButton');
+        const settingsMenu = document.getElementById('settingsMenu');
+        const toggleSoundButton = document.getElementById('toggleSound');
+        const toggleFullscreenButton = document.getElementById('toggleFullscreen');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        // 显示或隐藏设置菜单  
+        settingsButton.addEventListener('click', function () {
+            settingsMenu.style.display = settingsMenu.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // 切换声音播放  
+        toggleSoundButton.addEventListener('click', function () {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+            } else {
+                backgroundMusic.pause();
+            }
+        });
+
+        // 切换全屏模式  
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    alert(`无法进入全屏模式: ${err.message}`);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        toggleFullscreenButton.addEventListener('click', toggleFullscreen);
+
+    </script>
+
+
+    <audio id="moveSound">
+        <source src="move-sound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="failSound">
+        <source src="fail-sound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="winSound">
+        <source src="win-sound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="top" id="top">
+        <div class="title" id="title">2048</div>
+        <div class="score_newGame" id="score_newGame">
+            <a class="newGame" id="newGame" href="javascript:game.initial()" onclick="startTimer()">New Game</a>
+            <a class="back" id="back" href="javascript:game.goBack()">Back</a>
+            <span class="score">score:</span>
+            <span class="userScore" id="userScore">0</span>
+        </div>
+
+        <div class="save" id="save">
+            <a id="saveGame" class="saveGame" href="javascript:game.saveGame()">Save Game</a>
+            <a id="loadGame" class="loadGame" href="javascript:game.loadGame()">Load Game</a>
+        </div>
+
+
+
+
+        <div>
+            <p class='best'>best</p>
+            <p class='bestscore' id='bestscore'>0</p>
+        </div>
+
+
+    <div class="container_base" id="container_base">
+
+        <div class="elem_0_0"></div>
+
+        <div class="elem_0_1"></div>
+
+        <div class="elem_0_2"></div>
+
+        <div class="elem_0_3"></div>
+        <div class="elem_0_4"></div>
+        <div class="elem_0_5"></div>
+        <div class="elem_0_6"></div>
+        
+        
+
+
+        <div class="elem_1_0"></div>
+
+        <div class="elem_1_1"></div>
+
+        <div class="elem_1_2"></div>
+
+        <div class="elem_1_3"></div>
+        <div class="elem_1_4"></div>
+        <div class="elem_1_5"></div>
+        <div class="elem_1_6"></div>
+
+        <div class="elem_2_0"></div>
+
+        <div class="elem_2_1"></div>
+
+        <div class="elem_2_2"></div>
+
+        <div class="elem_2_3"></div>
+        <div class="elem_2_4"></div>
+        <div class="elem_2_5"></div>
+        <div class="elem_2_6"></div>
+
+        <div class="elem_3_0"></div>
+
+        <div class="elem_3_1"></div>
+
+        <div class="elem_3_2"></div>
+
+        <div class="elem_3_3"></div>
+        <div class="elem_3_4"></div>
+        <div class="elem_3_5"></div>
+        <div class="elem_3_6"></div>
+
+        <div class="elem_4_0"></div>
+
+        <div class="elem_4_1"></div>
+
+        <div class="elem_4_2"></div>
+
+        <div class="elem_4_3"></div>
+        <div class="elem_4_4"></div>
+        <div class="elem_4_5"></div>
+        <div class="elem_4_6"></div>
+
+        <div class="elem_5_0"></div>
+
+        <div class="elem_5_1"></div>
+
+        <div class="elem_5_2"></div>
+
+        <div class="elem_5_3"></div>
+        <div class="elem_5_4"></div>
+        <div class="elem_5_5"></div>
+        <div class="elem_5_6"></div>
+
+        <div class="elem_6_0"></div>
+
+        <div class="elem_6_1"></div>
+
+        <div class="elem_6_2"></div>
+
+        <div class="elem_6_3"></div>
+        <div class="elem_6_4"></div>
+        <div class="elem_6_5"></div>
+        <div class="elem_6_6"></div>
+
+    </div>
+
+ 
+
+    <div class="container" id="container">
+
+        <div class="elem_0_0" id="elem_0_0"></div>
+
+        <div class="elem_0_1" id="elem_0_1"></div>
+
+        <div class="elem_0_2" id="elem_0_2"></div>
+
+        <div class="elem_0_3" id="elem_0_3"></div>
+        <div class="elem_0_4" id="elem_0_4"></div>
+        <div class="elem_0_5" id="elem_0_5"></div>
+        <div class="elem_0_6" id="elem_0_6"></div>
+
+        
+
+        <div class="elem_1_0" id="elem_1_0"></div>
+
+        <div class="elem_1_1" id="elem_1_1"></div>
+
+        <div class="elem_1_2" id="elem_1_2"></div>
+
+        <div class="elem_1_3" id="elem_1_3"></div>
+        <div class="elem_1_4" id="elem_1_4"></div>
+        <div class="elem_1_5" id="elem_1_5"></div>
+        <div class="elem_1_6" id="elem_1_6"></div>
+
+        <div class="elem_2_0" id="elem_2_0"></div>
+
+        <div class="elem_2_1" id="elem_2_1"></div>
+
+        <div class="elem_2_2" id="elem_2_2"></div>
+
+        <div class="elem_2_3" id="elem_2_3"></div>
+        <div class="elem_2_4" id="elem_2_4"></div>
+        <div class="elem_2_5" id="elem_2_5"></div>
+        <div class="elem_2_6" id="elem_2_6"></div>
+
+
+        <div class="elem_3_0" id="elem_3_0"></div>
+
+        <div class="elem_3_1" id="elem_3_1"></div>
+
+        <div class="elem_3_2" id="elem_3_2"></div>
+        <div class="elem_3_3" id="elem_3_3"></div>
+
+        <div class="elem_3_4" id="elem_3_4"></div>
+        <div class="elem_3_5" id="elem_3_5"></div>
+        <div class="elem_3_6" id="elem_3_6"></div>
+
+
+        <div class="elem_4_0" id="elem_4_0"></div>
+
+        <div class="elem_4_1" id="elem_4_1"></div>
+
+        <div class="elem_4_2" id="elem_4_2"></div>
+        <div class="elem_4_3" id="elem_4_3"></div>
+
+        <div class="elem_4_4" id="elem_4_4"></div>
+        <div class="elem_4_5" id="elem_4_5"></div>
+        <div class="elem_4_6" id="elem_4_6"></div>
+
+
+
+        <div class="elem_5_0" id="elem_5_0"></div>
+
+        <div class="elem_5_1" id="elem_5_1"></div>
+
+        <div class="elem_5_2" id="elem_5_2"></div>
+        <div class="elem_5_3" id="elem_5_3"></div>
+
+        <div class="elem_5_4" id="elem_5_4"></div>
+        <div class="elem_5_5" id="elem_5_5"></div>
+        <div class="elem_5_6" id="elem_5_6"></div>
+
+
+        <div class="elem_6_0" id="elem_6_0"></div>
+
+        <div class="elem_6_1" id="elem_6_1"></div>
+
+        <div class="elem_6_2" id="elem_6_2"></div>
+        <div class="elem_6_3" id="elem_6_3"></div>
+
+        <div class="elem_6_4" id="elem_6_4"></div>
+        <div class="elem_6_5" id="elem_6_5"></div>
+        <div class="elem_6_6" id="elem_6_6"></div>
+
+
+
+    </div>
+
+ 
+
+    <div class="gameOverContainer" id="gameOverContainer">
+
+        <br><br>
+
+        <span class="gameOver">Game over,</span>
+
+        <br><br>
+
+        <span>You lose!</span>
+
+    </div>
+
+ 
+
+    <div class="gameWinContainer" id="gameWinContainer">
+
+        <br><br>
+
+        <span class="gameWin">Game over,</span>
+
+        <br><br>
+
+        <span>You win!</span>
+
+    </div>
+
+    <script src="js/index.js"></script>
+
+    <script>
+        let timerInterval;
+        let startTime;
+        let elapsedTime = 0;
+
+        function startTimer() {
+            
+            startTime = Date.now();
+            timerInterval = setInterval(updateTimer, 1000);
+
+            function updateTimer() {
+            elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+            let hours = Math.floor(elapsedTime / 3600);
+            let minutes = Math.floor((elapsedTime % 3600) / 60);
+            let seconds = elapsedTime % 60;
+            document.getElementById("timer").innerText = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+        }
+
+        function padZero(num) {
+            return num < 10 ? '0' + num : num;
+        }
+
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+            timerInterval = null;
+        }
+
+    </script>
+
+
+</body>
+
+ 
+
+</html>

@@ -1,0 +1,63 @@
+body {
+  background-image: url("登录背景.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: KaiTi;
+  text-align: center;
+}
+
+#login-container {
+  max-width: 400px;
+  margin: 300px auto;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 0 100px rgba(0, 0.5, 0, 0.5);
+  background-color: rgba(147, 38, 38, 0.1);
+  text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+  color: white;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  font-family: KaiTi;
+  font-size: 20px;
+  width: 80%;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #d1a5bc, #262f38);
+}
+
+#login-form button {
+  font-family: KaiTi;
+  font-size: 25px;
+  display: inline-block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 12px;
+  background-color: #a77fb1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#login-form button:hover {
+  background-color: #a77fb1;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#login-status {
+  margin-top: 40px;
+  color: #666;
+}

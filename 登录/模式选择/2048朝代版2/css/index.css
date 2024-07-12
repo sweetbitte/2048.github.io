@@ -1,0 +1,444 @@
+#settingsMenu {  
+  position: absolute;  
+  top: 58px;  
+  right: 10px;  
+  background-color: #bc313176;
+  border: 1px solid #ddd;  
+  padding: 10px;  
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);  
+  display: none; 
+  font-size:30px; 
+  
+}  
+
+#settingsButton {  
+  position: absolute;  
+  top: 25px;  
+  right: 10px; 
+  font-size:25px; 
+  font-family:'Simsun';
+  background-color: #bc3131;
+  color:white;
+  border: 1px solid #ddd;  
+}
+#toggleSound {
+  font-size:25px; 
+  font-family:'Simsun';
+}
+#toggleFullscreen {
+  font-size:25px; 
+  font-family:'Simsun';
+  margin-top: 10px;
+}
+
+.gamerule{
+  display:inline-block;
+  width:1000px;
+  margin-top:650px;
+  margin-left:200px;
+  line-height:12px;
+  text-align: center;
+}
+
+.save {
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  top: 10px;
+  left: 700px;
+}
+
+.saveGame {
+  display: block;
+  width: 150px;
+  height: 45px;
+  font-size: 20px;
+  text-decoration-line: none;
+  text-align: center;
+  line-height: 45px;
+  background-color: #b95137;
+  border-radius: 5px;
+  color: #faf8ef;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+}
+
+.loadGame {
+  display: block;
+  width: 150px;
+  height: 45px;
+  font-size: 20px;
+  text-decoration-line: none;
+  text-align: center;
+  line-height: 45px;
+  background-color: #b95137;
+  border-radius: 5px;
+  color: #faf8ef;
+  position: absolute;
+  top: 30px;
+  left: 170px;
+}
+
+
+
+
+
+
+.title {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 100px;
+  color: #f7f5f3;
+  position: absolute;
+  top: 25px;
+  left: 480px;
+}
+
+.score_newGame {
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  top: 60px;
+  left: 400px;
+}
+
+.newGame {
+  display: block;
+  width: 150px;
+  height: 45px;
+  font-size: 20px;
+  text-decoration-line: none;
+  text-align: center;
+  line-height: 45px;
+  background-color: #b95137;
+  border-radius: 5px;
+  color: #faf8ef;
+  position: absolute;
+  top: 40px;
+  left: 305px;
+}
+
+.back {
+  display: block;
+  width: 150px;
+  height: 45px;
+  font-size: 20px;
+  text-decoration-line: none;
+  text-align: center;
+  line-height: 45px;
+  background-color: #b95137;
+  border-radius: 5px;
+  color: #faf8ef;
+  position: absolute;
+  top: 40px;
+  left: 470px;
+}
+
+.his {
+  display: block;
+  width: 200px;
+  height: 170px;
+  font-size: 20px;
+  font-family: 'Simsun';
+  text-decoration-line:none;
+  text-align: center;
+  line-height: 45px;
+  background-color: #db1515bc;
+  border-radius: 5px;
+  color: #faf8ef;
+  position: absolute;
+  top: 340px;
+  left: 1030px;
+}
+.history {
+  display: block;
+  width: 200px;
+  height: 1000px;
+  font-size: 20px;
+  font-family: 'Simsun';
+  text-decoration-line:none;
+  text-align: center;
+  line-height: 13px;
+  background-color: #db1515bc;
+  border-radius: 5px;
+  color: #faf8ef;
+  position: absolute;
+  top: 374px;
+  left: 1030px;
+  overflow: scroll; 
+  /* scrollbar-width: none; */
+  scrollbar-color:rgba(242, 242, 244, 0.627) #49a8b9;
+  max-height: 150px; 
+}
+
+
+
+.best{
+  display: block;
+  width: 200px;
+  height: 190px;
+  font-size: 40px;
+  text-decoration-line:none;
+  text-align: center;
+  line-height: 45px;
+  background-color: #db1515bc;
+  border-radius: 5px;
+  color: #faf8ef;
+  position: absolute;
+  top: 30px;
+  left: 1030px;
+}
+.bestscore{
+  display: block;
+  width: 200px;
+  height: 100px;
+  font-size: 60px;
+  text-decoration-line:none;
+  text-align: center;
+  line-height: 45px;
+  background-color: #db1515bc;
+  border-radius: 5px;
+  color: #faf8ef;
+  position: absolute;
+  top: 100px;
+  left: 1030px;
+}
+
+/*伪类选择器*/
+a:hover {
+  color: #CAC0B4;
+  background-color: #faf8ef;
+  transition: color 0.2s;
+}
+
+a:active {
+  color: white;
+  background-color: #faf8ef;
+  transition: color 0.2s;
+}
+
+.score {
+  font-size: 30px;
+  color: #f8f5f4;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.userScore {
+  font-size: 30px;
+  color: #f2eeed;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+}
+
+.container_base {
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 470px;
+  bottom: 150px;
+  background-color: rgba(185, 173, 161, 0.3);
+  height: 495px;
+  width: 495px;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.container {
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 470px;
+  bottom: 150px;
+  background-color: rgba(241, 238, 234, 0.055);
+  height: 495px;
+  width: 495px;
+  border-radius: 10px;
+}
+
+.gameOverContainer {
+  display: none;
+  position: absolute;
+  top: 170px;
+  left: 470px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: black;
+  height: 495px;
+  width: 495px;
+  border-radius: 10px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.gameWinContainer {
+  display: none;
+  position: absolute;
+  top: 170px;
+  left: 470px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #f67c5f;
+  height: 495px;
+  width: 495px;
+  border-radius: 10px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.container_base div {
+  border-radius: 15px;
+  width: 110px;
+  height: 110px;
+
+  background-color: rgba(202, 192, 180, 0.147);
+
+  position: absolute;
+  z-index: -1;
+}
+
+.container div {
+  font-size: 45px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 15px;
+  width: 110px;
+  height: 110px;
+
+  background-color: rgba(red, green, blue, 0);
+
+  line-height: 110px;
+  position: absolute;
+
+  /*平滑移动*/
+  transition: top 0.15s, left 0.15s, background-color 0.15s, color 0.15s;
+}
+
+
+.elem_0_0 {
+  top: 11px;
+  left: 11px;
+}
+
+.elem_0_1 {
+  top: 11px;
+  left: 132px;
+}
+
+.elem_0_2 {
+  top: 11px;
+  left: 253px;
+}
+
+.elem_0_3 {
+  top: 11px;
+  left: 374px;
+}
+
+.elem_1_0 {
+  top: 132px;
+  left: 11px;
+}
+
+.elem_1_1 {
+  top: 132px;
+  left: 132px;
+}
+
+.elem_1_2 {
+  top: 132px;
+  left: 253px;
+}
+
+.elem_1_3 {
+  top: 132px;
+  left: 374px;
+}
+
+.elem_2_0 {
+  top: 253px;
+  left: 11px;
+}
+
+.elem_2_1 {
+  top: 253px;
+  left: 132px;
+}
+
+.elem_2_2 {
+  top: 253px;
+  left: 253px;
+}
+
+.elem_2_3 {
+  top: 253px;
+  left: 374px;
+}
+
+.elem_3_0 {
+  top: 374px;
+  left: 11px;
+}
+
+.elem_3_1 {
+  top: 374px;
+  left: 132px;
+}
+
+.elem_3_2 {
+  top: 374px;
+  left: 253px;
+}
+
+.elem_3_3 {
+  top: 374px;
+  left: 374px;
+}
+
+.n2 {
+  background-color: #ebd3b6
+}
+
+.n4 {
+  background-color: #f49352
+}
+
+.n8 {
+  background-color: #e04f1a
+}
+
+.n16 {
+  background-color: #e4601e
+}
+
+.n32 {
+  background-color: #f14916
+}
+
+.n64 {
+  background-color: #f65e36
+}
+
+.n128 {
+  background-color: #e0482dfa
+}
+
+.n256 {
+  background-color: #9e0a0a
+}
+
+.n512 {
+  background-color: rgb(210, 11, 11)
+}
+
+.n1024 {
+  background-color: #d40c09
+}
+
+.n2048 {
+  background-color: rgb(247, 11, 11)
+}
